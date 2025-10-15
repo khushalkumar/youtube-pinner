@@ -1,5 +1,7 @@
 # YouTube Pinner (Chrome Extension)
 
+<img width="2872" height="1374" alt="image" src="https://github.com/user-attachments/assets/3e37739e-33fe-4e51-b01a-ad335c031335" />
+
 Pin any YouTube video and see your pins at the top of the YouTube homepage. Pin directly from:
 - Video pages (📌 button)
 - The homepage (📌 button on each video card)
