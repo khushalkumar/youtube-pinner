@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Pinner",
+  "version": "1.0",
+  "description": "Pin unlimited YouTube videos and show them in the top row of the homepage with easy unpin functionality.",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/pin-128.png"
+    }
+  },
+  "icons": {
+    "128": "icons/pin-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://www.youtube.com/", "*://youtube.com/"],
+      "js": ["homepage.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
